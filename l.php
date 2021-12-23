@@ -3,7 +3,7 @@
 <title>Login page</title>
 <?php
 if(isset($_COOKIE["username"])){
-header("Location: H.php");
+header("Location: index.php");
  }
 ?>
 <?php include "./head.html" ?>
@@ -27,7 +27,7 @@ $rows = mysqli_num_rows($result);
 if($rows==1){
 setcookie ("username", $username, time()+ (86400 * 30));
 setcookie ("userpass", $password, time()+ (86400 * 30));
-header("Location: H.php");
+header("Location: index.php");
 }
 else{
 	echo "<div class='card'><div class='card-body text-center'><b style='color:red;margin-left:10px;'>Wrong username or password</b></div></div>";?>

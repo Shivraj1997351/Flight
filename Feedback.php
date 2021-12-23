@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
 	$query="INSERT INTO feedback(Name,email,SOURCE,DESTINATION,QUERY,Feed) VALUES('$name','$email','$source','$dest','$q','$t')";
 	$result = mysqli_query($con,$query);
 	if($result){
-     header("Location: H.php");		
+     header("Location: index.php");		
 	}
 }
 else{
